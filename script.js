@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 
    })
-    //get from local storage for persistance (json)
+    //get from local storage for persistance 
     //military time because moment.hours is in military time.
 
     $("#9 .description").val(localStorage.getItem("9"))
@@ -35,12 +35,9 @@ $(document).ready(function(){
         
             if (divHour < currentTime) {
 
-
                 $(this).addClass("past")
 
-
-
-            } else if (divHour === currentTime) {
+            } else if (divHour == currentTime) {
 
                 $(this).removeClass("past future")
 
@@ -48,7 +45,7 @@ $(document).ready(function(){
 
             } else {
 
-                $(this).removeClass("past future")
+                $(this).removeClass("past present")
 
                 $(this).addClass("future")
             }
